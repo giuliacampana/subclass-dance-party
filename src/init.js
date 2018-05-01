@@ -22,16 +22,16 @@ $(document).ready(function() {
 
     // make a dancer with a random position
 
-    var blinky= new dancerMakerFunction(
-      $("body").height() * Math.random(), // top
-      $("body").width() * Math.random(), // left
-      Math.random() * 2000 // timeBetweenSteps
-    );
-    $('body').append(blinky.$node);
-        // console.log(blinkyDancers);
-  });
+    var dancer = new dancerMakerFunction(
+      $("section").height() * Math.random(), // top
+      $("section").width() * Math.random(), // left
+      1000 )// timeBetwee);
+    
+    $('body').append(dancer.$node);
+    
+    // $('dancer').effect("bounce",{times:3}, 300);
 
-
+});
 
 $('.addPopDancerButton').on('click', function(event) {
     /* This function sets up the click handlers for the create-dancer

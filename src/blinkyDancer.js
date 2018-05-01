@@ -1,7 +1,8 @@
 var makeBlinkyDancer = function(top, left, timeBetweenSteps){
   
   makeDancer.call(this,top,left,timeBetweenSteps);
-this.$node = $('<span class="dancer blinky"></span>')
+  // this.dance();
+
 };
 
 
@@ -17,5 +18,13 @@ makeBlinkyDancer.prototype.step = function(){
   
 }
 
+// makeBlinkyDancer.prototype.dance = function(){
+//   this.$node.effect("bounce",{times:3}, 300)
+// }
 
+// function makeNewPosition() {
+//   var h = $(window).height() - 50;
+//   var w =
+
+// }
 
