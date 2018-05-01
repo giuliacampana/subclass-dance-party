@@ -42,7 +42,26 @@ body, a:link, a:visited, a:active{
 }
 
 .blinky {
-  border:10px solid red;
-  border-radius:10px;
+  display:inline-block;
   position:absolute;
+}
+
+.blinkyMinion {
+  height: 100px;
+  width: 80px;
+  position:absolute;
+  animation-name: blinkyDancer;
+  animation-duration:2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+
+}
+
+/* ===== Animation Effect ========== */
+
+@keyframes blinkyDancer {
+  0%{transform:rotate(0deg); transform-origin:center;}
+ 50%{transform:rotate(-20deg); transform-origin:center;}
+ 100%{transform:rotate(20deg); transform-origin:center;}
 }
