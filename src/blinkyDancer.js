@@ -15,7 +15,7 @@ makeBlinkyDancer.prototype.step = function(){
   this.$node.animate({width: [ "toggle", "swing" ],
     height: [ "toggle", "swing" ],
     opacity: "toggle"
-  }, 3000, "linear"
+  }, 1000, "linear"
   );
 
 }

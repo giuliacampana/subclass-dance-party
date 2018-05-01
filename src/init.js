@@ -1,3 +1,4 @@
+var count = 10;
 $(document).ready(function() {
   window.dancers = [];
 
@@ -8,9 +9,11 @@ $(document).ready(function() {
     // get the maker function for the kind of dancer we're supposed to make
     var dancerMakerFunction = window[dancerMakerFunctionName];
 
+    console.log("pass");
     var blinky= new dancerMakerFunction(
-      300,
-      $("section").width() * Math.random(),
+      500,
+      // $("section").width() * Math.random(),
+      count += 20,
       1000 )
 
     $('section').append(blinky.$node);
