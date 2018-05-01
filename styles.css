@@ -22,6 +22,10 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 
+
+.stage {
+  background-color: blue;
+}
 .dancer{
   border:10px solid yellow;
   border-radius:10px;
@@ -33,11 +37,3 @@ body, a:link, a:visited, a:active{
   border-radius:10px;
   position:absolute;
 }
-
-.background {
-  display: block;
-  height: 100px;
-  width: 100px;
-  margin: 200px 200px;
-}
-
