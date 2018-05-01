@@ -18,22 +18,23 @@ body, a:link, a:visited, a:active{
   height:32px;
   background-color: #555;
   margin: 0 0;
-  padding: 20px;
+  padding: 0 0;
 }
+
 .title{
   background-color: #777;
 }
 
-
 .stage {
   margin: 0 0;
-  height:80%;
+  height:100%;
   width:100%;
   background-image: url("/Users/chu/Desktop/hrsf96-subclass-dance-party/images/stage.jpeg");
   background-repeat: no-repeat;
   background-size: 100%;
 
 }
+
 .dancer{
   border:10px solid yellow;
   border-radius:10px;

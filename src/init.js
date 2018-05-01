@@ -9,7 +9,7 @@ $(document).ready(function() {
     var dancerMakerFunction = window[dancerMakerFunctionName];
 
     var blinky= new dancerMakerFunction(
-      $("section").height() * Math.random(),
+      300,
       $("section").width() * Math.random(),
       1000 )
 
