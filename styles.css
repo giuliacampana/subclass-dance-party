@@ -29,7 +29,8 @@ body, a:link, a:visited, a:active{
   margin: 0 0;
   height:100%;
   width:100%;
-  background-image: url("/Users/chu/Desktop/hrsf96-subclass-dance-party/images/stage.jpeg");
+  position:relative;
+  background-image: url("/Users/student/Desktop/hrsf96-subclass-dance-party/images/stage.jpeg");
   background-repeat: no-repeat;
   background-size: 100%;
 
@@ -58,6 +59,32 @@ body, a:link, a:visited, a:active{
 
 }
 
+.salsa {
+  display:inline-block;
+  position:absolute;
+}
+
+.salsaMinion {
+  height: 100px;
+  width: 80px;
+  position:absolute;
+  /*animation-name: salsaMinion;
+  animation-duration:1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;*/
+}
+
+.pop {
+  display:inline-block;
+  position:absolute;
+}
+
+.popMinion {
+  height: 100px;
+  width: 80px;
+  position:absolute;
+}
 /* ===== Animation Effect ========== */
 
 @keyframes blinkyDancer {
@@ -65,3 +92,11 @@ body, a:link, a:visited, a:active{
  50%{transform:rotate(-20deg); transform-origin:center;}
  100%{transform:rotate(20deg); transform-origin:center;}
 }
+
+/*@keyframes salsaMinion {
+  0%{transform:rotate(0deg); transform-origin:center;}
+  50%{transform:rotate(-20deg); transform-origin:center;}
+  100%{transform:rotate(20deg); transform-origin:center;}
+}*/
+
+
