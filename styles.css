@@ -17,6 +17,8 @@ body, a:link, a:visited, a:active{
 .topbar{
   height:32px;
   background-color: #555;
+  margin: 0 0;
+  padding: 20px;
 }
 .title{
   background-color: #777;
@@ -24,7 +26,13 @@ body, a:link, a:visited, a:active{
 
 
 .stage {
-  background-color: blue;
+  margin: 0 0;
+  height:80%;
+  width:100%;
+  background-image: url("/Users/chu/Desktop/hrsf96-subclass-dance-party/images/stage.jpeg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+
 }
 .dancer{
   border:10px solid yellow;
