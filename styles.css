@@ -1,30 +1,50 @@
 body, html{
   height:100%;
 }
+
 body{
   margin: 0px;
   background-color:#000000;
   font-size: 18px;
   position: relative;
 }
+
 body, a:link, a:visited, a:active{
-  color: lightblue;
+  color: white;
 }
-.title, .addDancerButton{
+
+.title {
   padding:5px 12px;
   float:right;
   letter-spacing: 2px;
-  font-family: Palatino, sans-serif;
+  font-family: 'Audiowide', cursive;
+  animation-name: fadeInOut;
+  animation-delay: 0s;
+  animation-duration: 2s;
+  text-decoration: none;
 }
+
 .topbar{
   height:32px;
   background-color: #000000;
-  margin: 0 0;
-  padding: 0 0;
+  margin: 5px 5px;
+  padding: 5px 5px;
+  font-family: 'Audiowide', cursive;
+  margin: 10px 10px;
+  padding: 5px 5px;
+  animation-name: fadeInOut;
+  animation-delay: 0s;
+  animation-duration: 2s;
+  text-decoration: none;
 }
 
-.title{
-  background-color: #777;
+.topbar a {
+  margin: 10px 10px;
+  padding: 5px 5px;
+  animation-name: fadeInOut;
+  animation-delay: 0s;
+  animation-duration: 2s;
+  text-decoration: none;
 }
 
 .stage {
@@ -33,12 +53,22 @@ body, a:link, a:visited, a:active{
   width:100%;
   color: white;
   position:relative;
-  letter-spacing: 3px;
-  font-family: Palatino, sans-serif;
-  background-image: url("/Users/student/Desktop/hrsf96-subclass-dance-party/images/stage.jpeg");
-  background-repeat: no-repeat;
-  background-size: 100%;
+  letter-spacing: 8px;
+  text-align: center;
+  font-family: 'Audiowide', cursive;
+  font-size: 24px;
+  background-image: url("/Users/student/Desktop/hrsf96-subclass-dance-party/images/background.gif");
+  background-repeat: 2;
+  background-size: 50%;
+}
 
+.stage h1 {
+  animation-name: stage;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+  transition:all 0.5s;
 }
 
 .dancer{
@@ -67,6 +97,9 @@ body, a:link, a:visited, a:active{
   height: 100px;
   width: 80px;
   position:absolute;
+  -webkit-animation-name: blinkyDancer;
+  -moz-animation-name: blinkyDancer;
+  -o-animation-name: blinkyDancer;
   animation-name: blinkyDancer;
   animation-duration:2s;
   animation-iteration-count: infinite;
@@ -75,7 +108,7 @@ body, a:link, a:visited, a:active{
 
 }
 
-.blinkyMinion:hover {
+.blinky:hover {
   transform: scale(2);
 }
 
@@ -90,12 +123,15 @@ body, a:link, a:visited, a:active{
   animation-direction: alternate;
 }
 
+.salsa:hover {
+  transform:scale(2); 
+}
 .popMinion {
   height: 100px;
   width: 80px;
   position:absolute;
   animation-name: popMinion;
-  animation-duration: 1s;
+  animation-duration: 2s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
   animation-timing-function: linear;
@@ -103,10 +139,28 @@ body, a:link, a:visited, a:active{
 
 }
 
-.popMinion:hover {
+.pop:hover {
   transform:scale(2); 
 }
 /* ===== Animation Effect ========== */
+
+@-webkit-keyframes blinkyDancer {
+  0%{transform:rotate(0deg); transform-origin:center;}
+ 50%{transform:rotate(-30deg); transform-origin:center;}
+ 100%{transform:rotate(30deg); transform-origin:center;}
+}
+
+@-moz-keyframes blinkyDancer {
+  0%{transform:rotate(0deg); transform-origin:center;}
+ 50%{transform:rotate(-30deg); transform-origin:center;}
+ 100%{transform:rotate(30deg); transform-origin:center;}
+}
+
+@-o-keyframes blinkyDancer {
+  0%{transform:rotate(0deg); transform-origin:center;}
+ 50%{transform:rotate(-30deg); transform-origin:center;}
+ 100%{transform:rotate(30deg); transform-origin:center;}
+}
 
 @keyframes blinkyDancer {
   0%{transform:rotate(0deg); transform-origin:center;}
@@ -121,8 +175,23 @@ body, a:link, a:visited, a:active{
 }
 
 @keyframes popMinion {
-  0% {transform:translate(0px, 0px, 0px);}
-  20% {transform: translate(20px,20px,20px);}
-  50% {transform: translate(30px,30px,30px);}
-  100% {transform: translate(10px,10px,10px);}
+  0% {transform:translateX(0px);}
+  20% {transform: translateX(100px);}
+  50% {transform: translate(50px);}
+  100% {transform: translate(100px);}
+}
+
+@keyframes stage {
+  0% {transform:translateX(0px);}
+  20% {transform: translateX(100px);}
+  50% {transform: translate(50px);}
+  100% {transform: translate(0px);}
+}
+
+@keyframes fadeInOut {
+  0% {opacity: 0;}
+
+  45% {opacity: 0.5;}
+
+  100% {opacity: 1;}
 }

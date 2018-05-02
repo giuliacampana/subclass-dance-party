@@ -4,7 +4,7 @@ $(document).ready(function() {
 
   // console.log(window.dancers);
 
-  var blinkyCount = 10;
+  // var blinkyCount = 10;
   $('.addBlinkyDancerButton').on('click', function(event) {
 
     var dancerMakerFunctionName = $(this).data('dancer-maker-function-name');
@@ -13,9 +13,14 @@ $(document).ready(function() {
     var dancerMakerFunction = window[dancerMakerFunctionName];
 
     var blinky = new dancerMakerFunction(
-      600,
-      blinkyCount += 70,
-      1000 );
+      // 600,
+      // blinkyCount += 70,
+      // 1000 
+
+      $("body").height() * Math.random(),
+      $("body").width() * Math.random(),
+      Math.random() * 1000
+    );
 
     $('section').append(blinky.$node);
 
@@ -23,7 +28,7 @@ $(document).ready(function() {
 
   });
 
-  var popCount = 1000;
+  // var popCount = 1000;
   $('.addPopDancerButton').on('click', function(event) {
 
     var dancerMakerFunctionName = $(this).data('dancer-maker-function-name');
@@ -33,9 +38,13 @@ $(document).ready(function() {
 
     // make a dancer with a random position
     var pop = new dancerMakerFunction(
-      400,
-      popCount -= 50,
-      1000
+      // 400,
+      // popCount -= 50,
+      // 1000
+
+      $("body").height() * Math.random(),
+      $("body").width() * Math.random(),
+      Math.random() * 1000
     );
 
     $('section').append(pop.$node);
@@ -44,7 +53,7 @@ $(document).ready(function() {
 
   });
 
-  var salsaCount = 50;
+  // var salsaCount = 50;
   $('.addSalsaDancerButton').on('click', function(event) {
 
     var dancerMakerFunctionName = $(this).data('dancer-maker-function-name');
@@ -54,9 +63,12 @@ $(document).ready(function() {
 
     // make a dancer with a random position
     var salsa = new dancerMakerFunction(
-      500,
-      salsaCount += 80,
-      1000
+      // 500,
+      // salsaCount += 80,
+      // 1000
+      $("body").height() * Math.random(),
+      $("body").width() * Math.random(),
+      Math.random() * 1000
     );
 
     $('section').append(salsa.$node);
@@ -68,9 +80,9 @@ $(document).ready(function() {
 
   $('.lineUpDancer').on('click', function(event) {
     
-    $('.salsa').css('top', 500);
-    $('.pop').css('top', 500);
-    $('.blinky').css('top', 500);
+    $('.salsa').css('top', 400);
+    $('.pop').css('top', 400);
+    $('.blinky').css('top', 400);
    
   });
 
@@ -78,18 +90,6 @@ $(document).ready(function() {
     $(this).css('cursor', 'pointer');
     // $().animate({width: '50%', height: '50%'}, 'slow');
   });
-
-  // $('.pop').mouseover(function() {
-  //   $(this).css('cursor', 'pointer');
-  //   $(this).animate({width: '500px'}, 'slow');
-  // });
-
-  // $('.pop').hover(function() {
-  //   $(this).css('cursor', 'pointer');
-  //   $(this).toggle('scale', {
-  //     effect: 'scale',
-  //     percent: '90%'
-  //   }, 200);
 
 });
 
